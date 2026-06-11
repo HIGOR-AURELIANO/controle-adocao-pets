@@ -57,8 +57,7 @@ O sistema utiliza o banco de dados relacional **SQLite** com a seguinte modelage
 ### Passo a Passo
 1. Clone este repositório:
    ```bash
-   git clone [https://github.com/SEU-USUARIO/controle-adocao-pets.git](https://github.com/SEU-USUARIO/controle-adocao-pets.git)# controle-adocao-pets
-
+   git clone [https://github.com/Anbuyyy9/controle-adocao-pets.git]
    
 Sistema de controle de adoção de pets para ONG. Trabalho acadêmico desenvolvido para a Estácio de Sá - Grupo 6
 
