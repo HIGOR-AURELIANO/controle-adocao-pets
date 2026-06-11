@@ -1,19 +1,409 @@
 <!DOCTYPE html>
-<html lang="Br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patinhas — Adote um amigo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Header</h1>
-    </header>
-    <main>
-        <h1>Main</h1>
-    <footer>
-        <h1>Footer</h1>
-    </footer>
-    
+
+  <!-- NAVBAR -->
+  <nav>
+    <a class="nav-logo" href="#">Patinhas<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#">Adotar</a></li>
+      <li><a href="#">Abrigos</a></li>
+      <li><a href="#">Histórias</a></li>
+      <li><a href="#">Favoritos ♡</a></li>
+      <li><a href="#" class="btn-cadastrar">Cadastrar pet</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Todo pet merece um lar <em>de verdade.</em></h1>
+      <p>Conectamos animais que precisam de uma família com pessoas prontas para dar amor. Adote, não compre.</p>
+      <div class="hero-actions">
+        <a href="#pets" class="btn-primary">Ver pets disponíveis</a>
+        <a href="#cadastrar" class="btn-outline">Sou um abrigo</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">4.280</div>
+          <div class="stat-label">pets adotados</div>
+        </div>
+        <div>
+          <div class="stat-num">312</div>
+          <div class="stat-label">abrigos parceiros</div>
+        </div>
+        <div>
+          <div class="stat-num">27</div>
+          <div class="stat-label">estados cobertos</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-illustration">
+      <div class="hero-pet-card">
+        <span class="hero-pet-emoji">🐶</span>
+        <div class="hero-pet-name">Bolinha</div>
+        <div class="hero-pet-info">Labrador · 2 anos · Macho</div>
+        <span class="hero-pet-badge">💛 Esperando há 3 meses</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSCA -->
+  <section class="search-section">
+    <div class="search-bar">
+      <span>🔍</span>
+      <input type="text" placeholder="Buscar por nome, raça, cidade...">
+      <button class="search-btn">Buscar</button>
+    </div>
+    <div class="filters">
+      <button class="filter-chip active">Todos</button>
+      <button class="filter-chip">Cachorro</button>
+      <button class="filter-chip">Gato</button>
+      <button class="filter-chip">Filhote</button>
+      <button class="filter-chip">Adulto</button>
+      <button class="filter-chip">Pequeno porte</button>
+      <button class="filter-chip">Belo Horizonte</button>
+      <button class="filter-chip">São Paulo</button>
+      <button class="filter-chip">Rio de Janeiro</button>
+      <button class="filter-chip">Urgente 🔴</button>
+    </div>
+  </section>
+
+  <!-- CATEGORIAS -->
+  <section class="categories-section">
+    <p class="section-eyebrow">Explore por tipo</p>
+    <h2 class="section-title">Qual amigo você procura?</h2>
+    <div class="categories-grid">
+      <div class="category-card selected">
+        <span class="category-emoji">🐕</span>
+        <div class="category-name">Cachorros</div>
+        <div class="category-count">1.840 pets</div>
+      </div>
+      <div class="category-card">
+        <span class="category-emoji">🐈</span>
+        <div class="category-name">Gatos</div>
+        <div class="category-count">1.204 pets</div>
+      </div>
+      <div class="category-card">
+        <span class="category-emoji">🐰</span>
+        <div class="category-name">Coelhos</div>
+        <div class="category-count">89 pets</div>
+      </div>
+      <div class="category-card">
+        <span class="category-emoji">🐦</span>
+        <div class="category-name">Aves</div>
+        <div class="category-count">147 pets</div>
+      </div>
+      <div class="category-card">
+        <span class="category-emoji">🐹</span>
+        <div class="category-name">Roedores</div>
+        <div class="category-count">56 pets</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PETS -->
+  <section class="pets-section" id="pets">
+    <div class="pets-header">
+      <div>
+        <h2 class="section-title">Esperando por você</h2>
+        <p class="pets-count">1.840 pets disponíveis para adoção</p>
+      </div>
+      <select class="sort-select">
+        <option>Mais recentes</option>
+        <option>Mais urgentes</option>
+        <option>Mais perto de mim</option>
+        <option>Filhotes primeiro</option>
+      </select>
+    </div>
+
+    <div class="pets-grid">
+
+      <!-- Card 1 -->
+      <div class="pet-card">
+        <div class="pet-image">🐶
+          <span class="pet-urgente">⚠ Urgente</span>
+          <button class="heart-btn" onclick="toggleHeart(this)">🤍</button>
+        </div>
+        <div class="pet-info">
+          <div class="pet-header">
+            <div>
+              <div class="pet-name">Bolinha</div>
+              <div class="pet-breed">Labrador mix</div>
+            </div>
+            <span class="pet-age">2 anos</span>
+          </div>
+          <div class="pet-tags">
+            <span class="pet-tag">Castrado</span>
+            <span class="pet-tag">Vacinado</span>
+            <span class="pet-tag">Brincalhão</span>
+          </div>
+          <div class="pet-location">Belo Horizonte, MG</div>
+        </div>
+        <div class="pet-footer">
+          <div class="pet-abrigo">
+            <strong>Abrigo Vida Nova</strong>
+            há 4 meses
+          </div>
+          <button class="btn-adotar">Adotar 💛</button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="pet-card">
+        <div class="pet-image pet-image--pink">🐱
+          <span class="pet-novo">✨ Novo</span>
+          <button class="heart-btn" onclick="toggleHeart(this)">🤍</button>
+        </div>
+        <div class="pet-info">
+          <div class="pet-header">
+            <div>
+              <div class="pet-name">Mimi</div>
+              <div class="pet-breed">SRD (Persa mix)</div>
+            </div>
+            <span class="pet-age">8 meses</span>
+          </div>
+          <div class="pet-tags">
+            <span class="pet-tag">Vacinada</span>
+            <span class="pet-tag">Dócil</span>
+            <span class="pet-tag">Indoor</span>
+          </div>
+          <div class="pet-location">São Paulo, SP</div>
+        </div>
+        <div class="pet-footer">
+          <div class="pet-abrigo">
+            <strong>ONG Gatil SP</strong>
+            há 2 semanas
+          </div>
+          <button class="btn-adotar">Adotar 💛</button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="pet-card">
+        <div class="pet-image pet-image--blue">🐕
+          <button class="heart-btn" onclick="toggleHeart(this)">🤍</button>
+        </div>
+        <div class="pet-info">
+          <div class="pet-header">
+            <div>
+              <div class="pet-name">Thor</div>
+              <div class="pet-breed">Golden Retriever</div>
+            </div>
+            <span class="pet-age">1 ano</span>
+          </div>
+          <div class="pet-tags">
+            <span class="pet-tag">Castrado</span>
+            <span class="pet-tag">Vacinado</span>
+            <span class="pet-tag">Energético</span>
+            <span class="pet-tag">Pet friendly</span>
+          </div>
+          <div class="pet-location">Rio de Janeiro, RJ</div>
+        </div>
+        <div class="pet-footer">
+          <div class="pet-abrigo">
+            <strong>Abrigo Recomeço</strong>
+            há 1 mês
+          </div>
+          <button class="btn-adotar">Adotar 💛</button>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="pet-card">
+        <div class="pet-image pet-image--purple">🐈
+          <span class="pet-urgente">⚠ Urgente</span>
+          <button class="heart-btn" onclick="toggleHeart(this)">🤍</button>
+        </div>
+        <div class="pet-info">
+          <div class="pet-header">
+            <div>
+              <div class="pet-name">Pipoca</div>
+              <div class="pet-breed">Siamês mix</div>
+            </div>
+            <span class="pet-age">3 anos</span>
+          </div>
+          <div class="pet-tags">
+            <span class="pet-tag">Vacinada</span>
+            <span class="pet-tag">Tímida</span>
+            <span class="pet-tag">Só pets</span>
+          </div>
+          <div class="pet-location">Curitiba, PR</div>
+        </div>
+        <div class="pet-footer">
+          <div class="pet-abrigo">
+            <strong>Casa Feliz PR</strong>
+            há 6 meses
+          </div>
+          <button class="btn-adotar">Adotar 💛</button>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="pet-card">
+        <div class="pet-image pet-image--yellow">🐶
+          <span class="pet-novo">✨ Novo</span>
+          <button class="heart-btn" onclick="toggleHeart(this)">🤍</button>
+        </div>
+        <div class="pet-info">
+          <div class="pet-header">
+            <div>
+              <div class="pet-name">Luna</div>
+              <div class="pet-breed">Poodle mix</div>
+            </div>
+            <span class="pet-age">4 meses</span>
+          </div>
+          <div class="pet-tags">
+            <span class="pet-tag">Filhote</span>
+            <span class="pet-tag">Vacinada</span>
+            <span class="pet-tag">Afetiva</span>
+          </div>
+          <div class="pet-location">Belo Horizonte, MG</div>
+        </div>
+        <div class="pet-footer">
+          <div class="pet-abrigo">
+            <strong>Abrigo Esperança</strong>
+            há 1 semana
+          </div>
+          <button class="btn-adotar">Adotar 💛</button>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="pet-card">
+        <div class="pet-image pet-image--green">🐰
+          <button class="heart-btn" onclick="toggleHeart(this)">🤍</button>
+        </div>
+        <div class="pet-info">
+          <div class="pet-header">
+            <div>
+              <div class="pet-name">Fofinho</div>
+              <div class="pet-breed">Angorá mix</div>
+            </div>
+            <span class="pet-age">1 ano</span>
+          </div>
+          <div class="pet-tags">
+            <span class="pet-tag">Tranquilo</span>
+            <span class="pet-tag">Vacinado</span>
+            <span class="pet-tag">Castrado</span>
+          </div>
+          <div class="pet-location">Porto Alegre, RS</div>
+        </div>
+        <div class="pet-footer">
+          <div class="pet-abrigo">
+            <strong>ONG Bichinhos RS</strong>
+            há 3 semanas
+          </div>
+          <button class="btn-adotar">Adotar 💛</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="load-more">
+      <button class="btn-load-more">Ver mais pets →</button>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="how-section">
+    <div class="how-inner">
+      <p class="section-eyebrow">Simples assim</p>
+      <h2 class="section-title">Como funciona a adoção</h2>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-icon">🔍</div>
+          <div class="step-title">Encontre seu pet</div>
+          <p class="step-desc">Use filtros por espécie, porte, idade e cidade. Cada perfil tem fotos e a história do animal.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">📋</div>
+          <div class="step-title">Preencha o formulário</div>
+          <p class="step-desc">Responda algumas perguntas para garantir que o pet vai para um lar compatível com seu estilo de vida.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">🤝</div>
+          <div class="step-title">Conheça o abrigo</div>
+          <p class="step-desc">Agende uma visita ao abrigo ou lar temporário para conhecer o pet pessoalmente antes da adoção.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">🏠</div>
+          <div class="step-title">Leve para casa!</div>
+          <p class="step-desc">Após aprovação, leve seu novo amigo para casa. O abrigo oferece suporte nos primeiros 30 dias.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA CADASTRAR PET -->
+  <section id="cadastrar">
+    <div class="cta-section">
+      <div class="cta-text">
+        <h2>Tem um pet que precisa de um lar?</h2>
+        <p>Se você é um abrigo, ONG, lar temporário ou encontrou um animal abandonado, cadastre-o gratuitamente na Patinhas. Milhares de famílias estão procurando um pet para adotar.</p>
+        <p class="cta-benefits">
+          ✅ Cadastro 100% gratuito<br>
+          ✅ Visibilidade em todo o Brasil<br>
+          ✅ Filtros inteligentes de compatibilidade<br>
+          ✅ Suporte para o processo de adoção
+        </p>
+      </div>
+      <div class="cta-form">
+        <h3>Cadastrar pet para adoção</h3>
+        <div class="form-group">
+          <label>Nome do pet</label>
+          <input type="text" placeholder="Ex: Bolinha">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Espécie</label>
+            <select>
+              <option>Cachorro</option>
+              <option>Gato</option>
+              <option>Coelho</option>
+              <option>Ave</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Idade</label>
+            <input type="text" placeholder="Ex: 2 anos">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Cidade</label>
+          <input type="text" placeholder="Ex: Belo Horizonte, MG">
+        </div>
+        <div class="form-group">
+          <label>Sobre o pet</label>
+          <textarea placeholder="Conte a história, personalidade e necessidades especiais..."></textarea>
+        </div>
+        <button class="btn-primary btn-full">Cadastrar gratuitamente 🐾</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>
+      <div class="footer-logo">Patinhas<span>.</span></div>
+      <div class="footer-text">© 2025 Patinhas — Todos os pets merecem amor.</div>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#">Sobre nós</a></li>
+      <li><a href="#">Abrigos parceiros</a></li>
+      <li><a href="#">Política de adoção</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </footer>
+<link rel="stylesheet" href="./css/style.css">
+<script src="./js/Script.js"></script>
 </body>
 </html>
