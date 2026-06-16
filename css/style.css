@@ -131,6 +131,7 @@ nav {
 
 .btn-outline:hover { border-color: var(--creme); }
 
+
 /* ─────────────────────────────────────────
    HERO
 ───────────────────────────────────────── */
@@ -822,6 +823,89 @@ nav {
 }
 
 /* ─────────────────────────────────────────
+   Formulários extras (adotante e adoção)
+───────────────────────────────────────── */
+
+#adocao-pet form,
+#cadastro-adotante form {
+  background: var(--branco);
+  border-radius: 24px;
+  padding: 36px;
+  box-shadow: 0 4px 32px rgba(26, 58, 42, 0.08);
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+#adocao-pet h3,
+#cadastro-adotante h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: var(--verde);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+#adocao-pet .form-group,
+#cadastro-adotante .form-group {
+  margin-bottom: 16px;
+}
+
+#adocao-pet label,
+#cadastro-adotante label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--grafite);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+#adocao-pet input,
+#adocao-pet select,
+#cadastro-adotante input,
+#cadastro-adotante select {
+  width: 100%;
+  border: 1.5px solid var(--bege);
+  border-radius: 10px;
+  padding: 11px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: var(--grafite);
+  outline: none;
+  background: var(--creme);
+  transition: border-color 0.2s;
+}
+
+#adocao-pet input:focus,
+#adocao-pet select:focus,
+#cadastro-adotante input:focus,
+#cadastro-adotante select:focus {
+  border-color: var(--verde-claro);
+}
+
+#adocao-pet button,
+#cadastro-adotante button {
+  background: var(--laranja);
+  color: var(--branco);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 100px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.2s, transform 0.15s;
+  width: 100%;
+}
+
+#adocao-pet button:hover,
+#cadastro-adotante button:hover {
+  background: var(--laranja-escuro);
+  transform: translateY(-1px);
+}
+
+/* ─────────────────────────────────────────
    FOOTER
 ───────────────────────────────────────── */
 footer {
@@ -862,9 +946,53 @@ footer {
 
 .footer-links a:hover { color: var(--creme); }
 
+/* Ajuste para imagens dos pets dinâmicos */
+.pet-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  border-radius: 0; /* segue o padrão do card */
+}
+
+/* Estilo para mostrar o nome do adotante */
+.pet-adotante {
+  font-size: 0.85rem;
+  color: var(--cinza);
+  margin-top: 8px;
+}
+
+.pet-adotante strong {
+  color: var(--verde);
+}
+
 /* ─────────────────────────────────────────
    RESPONSIVO
 ───────────────────────────────────────── */
+/* Botão de coração nos cards */
+.heart-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  z-index: 2;
+}
+
+/* Animação ao favoritar */
+.heart-btn.liked {
+  transform: scale(1.3);
+  color: #e63946; /* vermelho quando favoritado */
+}
+
+/* Estado normal (não favoritado) */
+.heart-btn {
+  color: #999;
+}
+
 @media (max-width: 900px) {
   nav { padding: 0 24px; }
 
