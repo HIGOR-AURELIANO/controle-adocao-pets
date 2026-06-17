@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patinhas — Adote um amigo</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a class="nav-logo" href="#">Patinhas<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#pets">Adotar</a></li>
+      <li><a href="#">Abrigos</a></li>
+      <li><a href="#">Histórias</a></li>
+      <li><a href="#">Favoritos ♡</a></li>
+      <li><a href="#cadastrar" class="btn-cadastrar">Cadastrar pet</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Todo pet merece um lar <em>de verdade.</em></h1>
+      <p>Conectamos animais que precisam de uma família com pessoas prontas para dar amor. Adote, não compre.</p>
+      <div class="hero-actions">
+        <a href="#pets" class="btn-primary">Ver pets disponíveis</a>
+        <a href="#cadastrar" class="btn-outline">Sou um abrigo</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">4.280</div>
+          <div class="stat-label">pets adotados</div>
+        </div>
+        <div>
+          <div class="stat-num">312</div>
+          <div class="stat-label">abrigos parceiros</div>
+        </div>
+        <div>
+          <div class="stat-num">27</div>
+          <div class="stat-label">estados cobertos</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-illustration">
+      <div class="hero-pet-card">
+        <span class="hero-pet-emoji">🐶</span>
+        <div class="hero-pet-name">Bolinha</div>
+        <div class="hero-pet-info">Labrador · 2 anos · Macho</div>
+        <span class="hero-pet-badge">💛 Esperando há 3 meses</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSCA -->
+  <section class="search-section">
+    <div class="search-bar">
+      <span>🔍</span>
+      <input type="text" placeholder="Buscar por nome, raça, cidade...">
+      <button class="search-btn">Buscar</button>
+    </div>
+    <div class="filters">
+      <button class="filter-chip active">Todos</button>
+      <button class="filter-chip">Cachorro</button>
+      <button class="filter-chip">Gato</button>
+      <button class="filter-chip">Filhote</button>
+      <button class="filter-chip">Adulto</button>
+      <button class="filter-chip">Pequeno porte</button>
+      <button class="filter-chip">Belo Horizonte</button>
+      <button class="filter-chip">São Paulo</button>
+      <button class="filter-chip">Rio de Janeiro</button>
+      <button class="filter-chip">Urgente 🔴</button>
+    </div>
+  </section>
+
+  <!-- CATEGORIAS -->
+  <section class="categories-section">
+    <p class="section-eyebrow">Explore por tipo</p>
+    <h2 class="section-title">Qual amigo você procura?</h2>
+    <div class="categories-grid">
+      <div class="category-card selected">
+        <span class="category-emoji">🐕</span>
+        <div class="category-name">Cachorros</div>
+        <div class="category-count">1.840 pets</div>
+      </div>
+      <div class="category-card">
+        <span class="category-emoji">🐈</span>
+        <div class="category-name">Gatos</div>
+        <div class="category-count">1.204 pets</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PETS (dinâmicos) -->
+  <section class="pets-section" id="pets">
+    <div class="pets-header">
+      <div>
+        <h2 class="section-title">Esperando por você</h2>
+        <p class="pets-count">Confira os pets disponíveis e os já adotados</p>
+      </div>
+      <select class="sort-select">
+        <option>Mais recentes</option>
+        <option>Mais urgentes</option>
+        <option>Mais perto de mim</option>
+        <option>Filhotes primeiro</option>
+      </select>
+    </div>
+
+    <!-- Pets Disponíveis -->
+    <h3>Pets Disponíveis</h3>
+    <div class="pets-grid" id="pets-disponiveis"></div>
+
+    <!-- Pets Adotados -->
+    <h3>Pets Adotados</h3>
+    <div class="pets-grid" id="pets-adotados"></div>
+
+    <div class="load-more">
+      <button class="btn-load-more">Ver mais pets →</button>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="how-section">
+    <div class="how-inner">
+      <p class="section-eyebrow">Simples assim</p>
+      <h2 class="section-title">Como funciona a adoção</h2>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-icon">🔍</div>
+          <div class="step-title">Encontre seu pet</div>
+          <p class="step-desc">Use filtros por espécie, porte, idade e cidade. Cada perfil tem fotos e a história do
+            animal.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">📋</div>
+          <div class="step-title">Preencha o formulário</div>
+          <p class="step-desc">Responda algumas perguntas para garantir que o pet vai para um lar compatível com seu
+            estilo de vida.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">🤝</div>
+          <div class="step-title">Conheça o abrigo</div>
+          <p class="step-desc">Agende uma visita ao abrigo ou lar temporário para conhecer o pet pessoalmente antes da
+            adoção.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">🏠</div>
+          <div class="step-title">Leve para casa!</div>
+          <p class="step-desc">Após aprovação, leve seu novo amigo para casa. O abrigo oferece suporte nos primeiros 30
+            dias.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA CADASTRAR PET -->
+  <section id="cadastrar">
+    <div class="cta-section">
+      <div class="cta-text">
+        <h2>Tem um pet que precisa de um lar?</h2>
+        <p>Cadastre-o gratuitamente na Patinhas e ajude a encontrar uma família.</p>
+      </div>
+      <div class="cta-form">
+        <h3>Cadastrar pet para adoção</h3>
+        <form id="form-cadastrar" enctype="multipart/form-data">
+          <div class="form-group">
+            <label>Nome do pet</label>
+            <input type="text" name="nome_pet" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Espécie</label>
+              <select name="especie" required>
+                <option>Cachorro</option>
+                <option>Gato</option>
+                <option>Coelho</option>
+                <option>Ave</option>
+                <option>Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Idade aproximada</label>
+              <input type="text" name="idade_aproximada" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Cidade</label>
+            <input type="text" name="cidade" required>
+          </div>
+          <div class="form-group">
+            <label>Sobre o pet</label>
+            <textarea name="sobre" required></textarea>
+          </div>
+          <div class="form-group">
+            <label>Tags (separadas por vírgula)</label>
+            <input type="text" name="tags" placeholder="Ex: Castrado, Vacinado, Brincalhão">
+          </div>
+          <div class="form-group">
+            <label>Foto do pet</label>
+            <input type="file" name="foto" accept="image/*">
+          </div>
+          <button type="submit" class="btn-primary btn-full">Cadastrar gratuitamente 🐾</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulário de cadastro de adotantes -->
+  <section id="cadastro-adotante">
+    <div class="cta-form">
+      <h3>Cadastrar Adotante</h3>
+      <form id="form-adotante">
+        <div class="form-group">
+          <label>Nome completo</label>
+          <input type="text" name="nome_completo" required>
+        </div>
+        <div class="form-group">
+          <label>Telefone</label>
+          <input type="text" name="telefone" required>
+        </div>
+        <div class="form-group">
+          <label>Endereço</label>
+          <input type="text" name="endereco">
+        </div>
+        <button type="submit" class="btn-primary btn-full">Cadastrar Adotante</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Formulário de adoção -->
+  <section id="adocao-pet">
+    <div class="cta-form">
+      <h3>Adotar Pet</h3>
+      <form id="form-adocao">
+        <div class="form-group">
+          <label>Selecione o Pet</label>
+          <select name="pet_id" id="select-pet" required>
+            <!-- opções preenchidas dinamicamente pelo Script.js -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Selecione o Adotante</label>
+          <select name="adotante_id" id="select-adotante" required>
+            <!-- opções preenchidas dinamicamente pelo Script.js -->
+          </select>
+        </div>
+        <button type="submit" class="btn-primary btn-full">Adotar 💛</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>
+      <div class="footer-logo">Patinhas<span>.</span></div>
+      <div class="footer-text">© 2026 Patinhas — Todos os pets merecem amor.</div>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#">Sobre nós</a></li>
+      <li><a href="#">Abrigos parceiros</a></li>
+      <li><a href="#">Política de adoção</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/Script.js"></script>
+</body>
+
+</html>
